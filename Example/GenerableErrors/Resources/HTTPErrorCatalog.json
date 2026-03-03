@@ -1,0 +1,140 @@
+[
+  {
+    "code": 400,
+    "name": "Bad Request",
+    "rfc": "RFC 9110 §15.5.1",
+    "explanation": "The server can't understand the request because the syntax is malformed. Check your JSON body, query parameters, or content-type headers."
+  },
+  {
+    "code": 401,
+    "name": "Unauthorized",
+    "rfc": "RFC 9110 §15.5.2",
+    "explanation": "Authentication is required but was missing or invalid. Your token expired, your API key is wrong, or you forgot the Authorization header entirely."
+  },
+  {
+    "code": 403,
+    "name": "Forbidden",
+    "rfc": "RFC 9110 §15.5.4",
+    "explanation": "The server understood your request but refuses to fulfill it. You authenticated fine — you just don't have permission to access this resource."
+  },
+  {
+    "code": 404,
+    "name": "Not Found",
+    "rfc": "RFC 9110 §15.5.5",
+    "explanation": "The most famous HTTP error. The server can't find the requested resource. The URL is wrong, the resource was deleted, or it never existed."
+  },
+  {
+    "code": 405,
+    "name": "Method Not Allowed",
+    "rfc": "RFC 9110 §15.5.6",
+    "explanation": "You used the wrong HTTP verb. Tried to DELETE something that only accepts GET, or POST to a read-only endpoint."
+  },
+  {
+    "code": 408,
+    "name": "Request Timeout",
+    "rfc": "RFC 9110 §15.5.9",
+    "explanation": "The server got tired of waiting for your request to complete. Slow network, huge payload, or the client just took too long."
+  },
+  {
+    "code": 409,
+    "name": "Conflict",
+    "rfc": "RFC 9110 §15.5.10",
+    "explanation": "The request conflicts with the current state of the resource. Common in version control and concurrent edit scenarios."
+  },
+  {
+    "code": 410,
+    "name": "Gone",
+    "rfc": "RFC 9110 §15.5.11",
+    "explanation": "Like 404, but permanent and intentional. The resource existed once but has been deliberately removed. It's not coming back."
+  },
+  {
+    "code": 413,
+    "name": "Content Too Large",
+    "rfc": "RFC 9110 §15.5.14",
+    "explanation": "Your request body is bigger than the server is willing to process. That 50MB image upload? The server said no."
+  },
+  {
+    "code": 418,
+    "name": "I'm a Teapot",
+    "rfc": "RFC 2324 §2.3.2",
+    "explanation": "A joke from the Hyper Text Coffee Pot Control Protocol. The server refuses to brew coffee because it is, permanently, a teapot. Real RFC, real laughs."
+  },
+  {
+    "code": 422,
+    "name": "Unprocessable Content",
+    "rfc": "RFC 9110 §15.5.21",
+    "explanation": "The syntax is fine, but the semantics are wrong. Your JSON parsed correctly but the values don't make sense — like a negative age or a date in the year 9999."
+  },
+  {
+    "code": 429,
+    "name": "Too Many Requests",
+    "rfc": "RFC 6585 §4",
+    "explanation": "You hit the rate limit. The server is telling you to slow down. Check the Retry-After header and back off."
+  },
+  {
+    "code": 451,
+    "name": "Unavailable for Legal Reasons",
+    "rfc": "RFC 7725 §3",
+    "explanation": "The resource is blocked due to legal demands — censorship, court orders, or GDPR takedowns. Named after Fahrenheit 451."
+  },
+  {
+    "code": 500,
+    "name": "Internal Server Error",
+    "rfc": "RFC 9110 §15.6.1",
+    "explanation": "The catch-all server failure. Something went wrong, and the server doesn't have a more specific error to give you. Check the server logs."
+  },
+  {
+    "code": 501,
+    "name": "Not Implemented",
+    "rfc": "RFC 9110 §15.6.2",
+    "explanation": "The server doesn't recognize the request method or lacks the ability to fulfill it. The feature you're calling simply doesn't exist yet."
+  },
+  {
+    "code": 502,
+    "name": "Bad Gateway",
+    "rfc": "RFC 9110 §15.6.3",
+    "explanation": "A proxy or gateway received an invalid response from the upstream server. The server behind the server broke."
+  },
+  {
+    "code": 503,
+    "name": "Service Unavailable",
+    "rfc": "RFC 9110 §15.6.4",
+    "explanation": "The server is temporarily unable to handle the request. Usually due to maintenance or overload. The Super Bowl just started and everyone is streaming."
+  },
+  {
+    "code": 504,
+    "name": "Gateway Timeout",
+    "rfc": "RFC 9110 §15.6.5",
+    "explanation": "The proxy or gateway didn't get a response from the upstream server in time. Like a 408, but between servers instead of client and server."
+  },
+  {
+    "code": 507,
+    "name": "Insufficient Storage",
+    "rfc": "RFC 4918 §11.5",
+    "explanation": "The server can't store the representation needed to complete the request. The disk is full — someone forgot to set up log rotation."
+  },
+  {
+    "code": 508,
+    "name": "Loop Detected",
+    "rfc": "RFC 5842 §7.2",
+    "explanation": "The server detected an infinite loop while processing the request. A redirect chain that points back to itself, forever."
+  },
+  {
+    "code": 511,
+    "name": "Network Authentication Required",
+    "rfc": "RFC 6585 §6",
+    "explanation": "You need to authenticate to gain network access. That hotel WiFi captive portal page? This is the status code behind it."
+  },
+  {
+    "code": 520,
+    "name": "Web Server Returns Unknown Error",
+    "rfc": "Cloudflare (non-standard)",
+    "explanation": "A Cloudflare-specific code. The origin server returned something unexpected. Not an official IANA code, but you'll see it in the wild."
+  },
+  {
+    "code": 521,
+    "name": "Web Server Is Down",
+    "rfc": "Cloudflare (non-standard)",
+    "explanation": "Another Cloudflare special. The origin server actively refused the connection. The server process crashed or isn't running."
+  }
+]
